@@ -4,12 +4,14 @@
       <span v-if="isFolder">{{ isOpen ? "-" : "+" }} </span> {{ item.name }}
     </div>
     <ul v-show="isOpen" v-if="isFolder" class="portfolio__item">
+      <!-- <nuxt-link :to="goThere"> -->
       <tree-item
         class="item"
         v-for="(child, index) in item.children"
         :key="index"
         :item="child"
       />
+      <!-- </nuxt-link> -->
     </ul>
   </li>
 </template>
@@ -29,6 +31,16 @@ export default {
     isFolder: function() {
       return this.item.children && this.item.children.length;
     }
+
+    // goThere() {
+    //   const isVoting = this.$route.path === "/voting";
+
+    //   if (isVoting) {
+    //     return "/voting-entries?id=" + 1;
+    //   } else {
+    //     return "/challenge-results?id=" + 1;
+    //   }
+    // }
   },
   methods: {
     toggle: function() {

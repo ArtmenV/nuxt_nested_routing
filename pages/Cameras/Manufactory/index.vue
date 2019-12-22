@@ -24,7 +24,6 @@ export default {
   },
   methods: {
     dataItems() {
-      // this.$router.push(`/cameras/manufactory?id=${7}/cameraidCam=${3}`);
       this.$router.push({
         path: "/cameras/manufactory/camera",
         query: { id: 1, cumId: 7 }

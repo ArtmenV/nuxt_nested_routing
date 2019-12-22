@@ -1,46 +1,59 @@
 <template>
-  <div class="container"></div>
+  <div class="container">
+    Default
+    <!-- <div>
+      <main>
+        <button @click="increment">{{ counter }}</button>
+      </main>
+    </div>
+
+    <nuxt-link :to="switchLocalePath('it')">Italian</nuxt-link>
+    <nuxt-link :to="switchLocalePath('en')">English</nuxt-link>
+
+    <h1>{{ $t("hello") }}</h1>-->
+  </div>
 </template>
 
 <script>
-import Logo from "~/components/Logo.vue";
+// import { mapState } from "vuex";
+// import { mapMutations } from "vuex";
+// import axios from "axios";
+// import Logo from "~/components/Logo.vue";
 
-export default {
-  components: {
-    Logo
-  }
-};
+// export default {
+//   async asyncData({ store, error }) {
+//     try {
+//       const users = await store.dispatch("users/fetchUsers");
+//       debugger;
+//       return { users };
+//     } catch (e) {
+//       error(e);
+//     }
+//   },
+
+//   data: () => ({
+//     dates: []
+//   }),
+
+//   components: {
+//     Logo
+//   }
+
+// fetch({ store }) {
+//   store.commit("increment");
+// },
+
+// methods: {
+//   increment() {
+//     this.$store.commit("increment");
+//   }
+// },
+
+// computed: {
+//   ...mapState(["counter"])
+// }
+// };
+//
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
+// <style></style>
